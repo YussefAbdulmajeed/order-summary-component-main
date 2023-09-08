@@ -1,0 +1,172 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: url("images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 350px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 0 rgba(1 1 1 / 25%);
+}
+
+.img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.img img {
+    width: inherit;
+    border-radius: 15px 15px 0 0;
+}
+
+.about-card {
+    padding: 20px;
+    text-align: center;
+}
+
+.about-card .text {
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-card .text h3 {
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+.about-card .text p {
+    font-size: 14px;
+    color: hsl(224, 23%, 55%);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.price {
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(225, 100%, 98%);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.price .icon {
+    display: flex;
+    align-items: center;
+}
+
+.price .icon img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.price .icon .name span:first-child {
+    font-size: 14px;
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+}
+
+.price .icon .name span:last-child {
+    font-size: 14px;
+    color: hsl(224, 23%, 55%);
+    font-weight: 500;
+}
+
+.price a {
+    color: rgb(56 41 224 / 70%);
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.price a:hover {
+    color: hsl(245, 75%, 52%);
+    text-decoration: underline;
+}
+
+.about-card a.btn {
+    margin: auto;
+    background-color: rgb(56 41 224 / 70%);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    padding: 12px;
+    border-radius: 10px;   
+    box-shadow: 0 13px 15px 0px rgb(56 41 224 / 20%);
+}
+
+.about-card a.btn:hover {
+    background-color: hsl(245, 75%, 52%);
+}
+
+.about-card a.order {
+    display: block;
+    margin: 15px auto;
+    color: hsl(223, 47%, 23%);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.about-card a.order:hover {
+    color: hsl(224, 23%, 55%);
+}
+
+
+/* mobile card */
+@media(max-width:500px) {
+    body {
+    background-image: url("images/pattern-background-mobile.svg");
+    }
+    .container {
+        width: 300px;
+    }
+    .about-card .text h3 {
+        font-size: 1.2em;
+    }
+    .about-card .text p {
+        font-size: 12.5px;
+    }
+    .price {
+        margin: 15px auto 15px auto;
+    }
+    .price .icon .name span:first-child,
+    .price .icon .name span:last-child,
+    .price a,
+    .about-card a.btn{
+        font-size: 12.5px;
+    }
+    .about-card a.btn {
+        width: 260px;
+    }
+
+}
